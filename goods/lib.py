@@ -55,10 +55,14 @@ def sendSMS(params, tel):
 	req.sms_param = json.dumps(params)
 
 	try:
-	    resp= req.getResponse()
-	    print(resp)
+	    resp = req.getResponse()
+	    if resp['alibaba_aliqin_fc_sms_num_send_response']:
+	    	return True
+	    else:
+	    	return False
 	except Exception,e:
 	    print(e)
+	    return False
 
 if __name__ == '__main__':
 	stocks =  getStock()
@@ -70,6 +74,6 @@ if __name__ == '__main__':
 		params['isup'+str(index+1)] = stock['isup']
 		params['dis'+str(index+1)] = stock['dis']
 	print params
-	sendSMS(params)
+	sendSMS(params, '13136652521')
 
 

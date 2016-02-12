@@ -33,7 +33,7 @@ class TELAdmin(object):
 	ordering = ['-time']
 
 class SendLogAdmin(object):
-	list_display = ['data', 'time']
+	list_display = ['data', 'tel', 'time']
 	list_per_page = 20
 	ordering = ['-time']
 

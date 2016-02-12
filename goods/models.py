@@ -35,6 +35,7 @@ class TEL(models.Model):
 class SendLog(models.Model):
 	time = models.DateTimeField(verbose_name = u'发送时间', auto_now = True)
 	data = models.ForeignKey(Stock, verbose_name = u'数据')
+	tel = models.ForeignKey(TEL, verbose_name = u'手机号码')
 
 
 	def __unicode__(self):
