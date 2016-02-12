@@ -8,7 +8,7 @@ if [ "$1" = "start" ]; then
     echo "uwsgi is running!"  
     exit 0  
   else  
-    /usr/local/bin/uwsgi /home/cyd/www/Stock/uwsgi.ini  
+    /usr/bin/uwsgi /home/cyd/www/stock/uwsgi.ini  
   fi  
   echo "Start uwsgi service [OK]"  
 elif [ "$1" = "stop" ];then  
@@ -16,7 +16,7 @@ elif [ "$1" = "stop" ];then
   echo "Stop uwsgi service [OK]"  
 elif [ "$1" = "restart" ];then  
   killall -9 uwsgi  
-  /usr/local/bin/uwsgi /home/cyd/www/Stock/uwsgi.ini  
+  /usr/bin/uwsgi /home/cyd/www/stock/uwsgi.ini  
   echo "Restart uwsgi service [OK]"  
 else  
   echo "Usages: uwsgiserver [start|stop|restart]"  
