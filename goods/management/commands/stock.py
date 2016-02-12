@@ -8,6 +8,6 @@ class Command(BaseCommand):
 	def handle(self, *arg, **options):
 		stocks =  getStock()
 		params = getParams(stocks)
-		params = json.dumps(params)
-		StockObj = Stock(types = 1, content = params)
+		content = json.dumps(stocks)
+		StockObj = Stock(types = 2, content = content)
 		StockObj.save()
