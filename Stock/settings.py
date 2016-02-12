@@ -142,6 +142,8 @@ STATICFILES_FINDERS = (
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
+LOG_FILE_PATH = os.path.join(BASE_DIR, "log.json")
+
 CRONJOBS = [
-    ('*/1 * * * *', 'django.core.management.call_command', ['stock'], {}, '> /Users/congyuandong/Workspaces/Django/Stock/log.json'),
+    ('*/1 * * * *', 'django.core.management.call_command', ['stock']),
 ]
