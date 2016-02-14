@@ -146,9 +146,9 @@ LOG_FILE_PATH = os.path.join(BASE_DIR, "log.json")
 
 CRONJOBS = [
     ('*/10 * * * *', 'django.core.management.call_command', ['stock']),
-    ('0 6 * * *', 'django.core.management.call_command', ['msm']),
-    ('30 9 * * *', 'django.core.management.call_command', ['msm']),
-    ('30 11 * * *', 'django.core.management.call_command', ['msm']),
-    ('30 13 * * *', 'django.core.management.call_command', ['msm']),
-    ('0 15 * * *', 'django.core.management.call_command', ['msm']),
+    ('0 6 * * 1-5', 'django.core.management.call_command', ['msm']),
+    ('30 9 * * 1-5', 'django.core.management.call_command', ['msm']),
+    ('30 11 * * 1-5', 'django.core.management.call_command', ['msm']),
+    ('30 13 * * 1-5', 'django.core.management.call_command', ['msm']),
+    ('0 15 * * 1-5', 'django.core.management.call_command', ['msm']),
 ]
