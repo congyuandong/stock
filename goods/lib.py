@@ -51,7 +51,7 @@ def sendSMS(params, tel):
 	req.sms_free_sign_name = "上海现货"
 	#req.sms_param = "{\"price1\":\"1234\",\"product\":\"阿里大鱼\",\"item\":\"阿里大鱼\"}"
 	req.rec_num = tel
-	req.sms_template_code = "SMS_5056493"
+	req.sms_template_code = "SMS_5002261"
 	req.sms_param = json.dumps(params)
 
 	try:
